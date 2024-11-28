@@ -1,0 +1,33 @@
+.regionList {
+  overflow: hidden;
+  overflow-y: auto;
+  max-height: 500px;
+  margin: 5px 0 0 0;
+
+  .region {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 10px;
+    line-height: 1em;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #ccc;
+    }
+
+    .flag {
+      display: block;
+      width: 20px;
+      height: 20px;
+    }
+
+    .name {
+      flex: 1;
+    }
+
+    .code {
+      font-weight: bold;
+    }
+  }
+}

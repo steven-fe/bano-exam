@@ -1,0 +1,47 @@
+.displayArea {
+  $height: 40px;
+  $vertical-padding: 4px;
+  $border-width: 1px;
+
+  height: $height;
+  padding: $vertical-padding 8px;
+  border: $border-width solid #a7b1bb;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: $height - $vertical-padding * 2 - $border-width * 2;
+  cursor: pointer;
+}
+
+.regionList {
+  overflow: hidden;
+  overflow-y: auto;
+  height: 50vh;
+  margin: 5px 0 0 0;
+
+  .region {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 10px;
+    line-height: 1em;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #ccc;
+    }
+
+    .flag {
+      display: block;
+      width: 20px;
+      height: 20px;
+    }
+
+    .name {
+      flex: 1;
+    }
+
+    .code {
+      font-weight: bold;
+    }
+  }
+}
