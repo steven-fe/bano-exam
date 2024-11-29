@@ -1,3 +1,5 @@
+import type { Region } from "./types";
+
 import { useCallback, useMemo, useState, useSyncExternalStore } from "react";
 import regionList from "./data";
 import RegionSelectionPc from "../region-selection-pc";
@@ -5,7 +7,6 @@ import RegionSelectionH5 from "../region-selection-h5";
 
 const useRenderType = () => {
   const setRenderWidth = useCallback(() => {
-    console.log(window.document.documentElement.getBoundingClientRect().width);
     return window.document.documentElement.getBoundingClientRect().width < 768
       ? "h5"
       : "pc";
@@ -19,12 +20,15 @@ const useRenderType = () => {
   return useSyncExternalStore(subscribe, setRenderWidth);
 };
 
-export default function RegionSelection() {
+export default function RegionSelection({
+  region,
+  setRegion,
+}: {
+  region: Region | null;
+  setRegion: (region: Region) => void;
+}) {
   const [open, setOpen] = useState(!false);
 
-  const [region, setRegion] = useState<(typeof regionList)[number] | null>(
-    null
-  );
   const [filterText, setFilterText] = useState("");
 
   const renderRegionList = useMemo(() => {

@@ -1,6 +1,6 @@
 import { Input } from "@/components/ui/input";
 import styles from "./index.module.scss";
-import { Region } from "../../types";
+import { Region } from "@/components/region-selection/types";
 
 export default function List({
   list,

@@ -1,4 +1,4 @@
-import type { Region } from "../region-selection-pc/types";
+import type { Region } from "../region-selection/types"; 
 
 import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 import Trigger from "../region-selection-pc/components/trigger";

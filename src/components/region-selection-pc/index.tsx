@@ -1,4 +1,4 @@
-import type { Region } from "./types";
+import type { Region } from "../region-selection/types"; 
 
 import {
   Popover,

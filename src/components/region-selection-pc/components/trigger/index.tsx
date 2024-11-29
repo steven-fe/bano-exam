@@ -1,6 +1,6 @@
-import { forwardRef } from "react";
-import type { Region } from "../../types";
+import type { Region } from "@/components/region-selection/types";
 
+import { forwardRef } from "react";
 import styles from "./index.module.scss";
 
 export default forwardRef(function Trigger(
