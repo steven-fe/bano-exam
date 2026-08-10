@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# 个人简历产物，含联系方式，禁止提交到公开仓库
+resume-output/
